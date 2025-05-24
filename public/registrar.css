@@ -1,0 +1,13 @@
+form{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 20px;
+}
+input{
+    padding: 20px 80px;
+    margin-right: 50px;
+}
+button{
+    padding: 20px 100px;
+}

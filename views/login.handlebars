@@ -1,0 +1,12 @@
+<form action="/login" method="post">
+  <h1>Faça seu login</h1>
+  <label>Usuário: <input type="text" name="usuario" required></label>
+  <label>Senha: <input type="password" name="senha" required></label>
+  <button type="submit">Entrar</button>
+</form>
+
+{{#if mensagem}}
+<script>
+  alert('{{mensagem}}');
+</script>
+{{/if}}

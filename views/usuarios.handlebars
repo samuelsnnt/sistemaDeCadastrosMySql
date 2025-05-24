@@ -1,0 +1,11 @@
+<h1>Usuários cadastrados:</h1>
+{{#each posts}}
+
+    <div style="display: flex; flex-flow:column;">
+        <h2>{{usuario}}</h2>
+        <h2>{{senhaOriginal}}</h2>
+        <a href="/deletar/{{id}}"><button>Deletar</button></a>
+    </div>
+
+{{/each}}
+
