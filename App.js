@@ -5,7 +5,6 @@ const Post = require('./models/Post.js')
 const bodyParser = require('body-parser');//BODY-PARSER - Recebe dados de um formulário no Express.
 const bcrypt = require('bcrypt');
 
-
 const handlebars = require('express-handlebars');
 app.engine('handlebars', handlebars.engine({defaultLayout: 'main', runtimeOptions: { allowProtoPropertiesByDefault: true, allowProtoMethodsByDefault: true,},}))
 app.set('view engine', 'handlebars');
@@ -67,7 +66,7 @@ app.post('/login', async (req, res) => {
     console.error(erro);
     return res.status(500).send('Erro no servidor');
   }
-});
+});\
 
 
 app.get('/usuarios', function(req, res){
@@ -89,6 +88,6 @@ app.get('/deletar/:id', function(req, res){
 // Pasta de arquivos estáticos (CSS, JS, imagens etc.)
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen(8081, function(){
+app.listen(5432, function(){
     console.log('Servidor rodando na URL: http://localhost:8081')
 });
